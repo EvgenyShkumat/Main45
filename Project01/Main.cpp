@@ -7,19 +7,19 @@ string output(int* vector, int size);
 bool is_there_local_min(int* vector, int length);
 bool is_there_local_max(int* vector, int length);
 
+string find_all_local_min(int* vector, int length);
+string find_all_local_max(int* vector, int length);
+
 int main() {
-	int size = 5;
+	int size = 6;
 	int* vector = new int[size];
 	
 	random_init(vector, size, 0, 9);
-	string msg_min = is_there_local_min(vector, size) 
-		? "Yes, there is local min" : "No, there is no local min";
-	string msg_max = is_there_local_max(vector, size) 
-		? "Yes, there is local max" : "No, there is no local max";
+	
 
 	cout << "Vector:\n" << output(vector, size) << endl;
-	cout << msg_min << endl;
-	cout << msg_max << endl;
+	cout << "All local max: " << find_all_local_max(vector, size) << endl;
+	cout << "All local min: " << find_all_local_min(vector, size) << endl;
 
 	return 0;
 }
