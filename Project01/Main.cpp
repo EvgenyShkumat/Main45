@@ -10,6 +10,9 @@ bool is_there_local_max(int* vector, int length);
 string find_all_local_min(int* vector, int length);
 string find_all_local_max(int* vector, int length);
 
+int count_all_local_min(int* vector, int length);
+int count_all_local_max(int* vector, int length);
+
 int main() {
 	int size = 6;
 	int* vector = new int[size];
@@ -20,6 +23,8 @@ int main() {
 	cout << "Vector:\n" << output(vector, size) << endl;
 	cout << "All local max: " << find_all_local_max(vector, size) << endl;
 	cout << "All local min: " << find_all_local_min(vector, size) << endl;
+	cout << "Count local max: " << count_all_local_max(vector, size) << endl;
+	cout << "Count local min: " << count_all_local_min(vector, size) << endl;
 
 	return 0;
 }
